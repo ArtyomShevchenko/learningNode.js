@@ -1,0 +1,25 @@
+{
+  "name": "node",
+  "version": "0.0.1",
+  "description": "Lerning node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "PORT=5000 node ./node.ls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArtyomShevchenko/learningNode.js.git"
+  },
+  "keywords": [
+    "node",
+    "node.js",
+    "js"
+  ],
+  "author": "Shevchenko Artyom Alekseivich",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ArtyomShevchenko/learningNode.js/issues"
+  },
+  "homepage": "https://github.com/ArtyomShevchenko/learningNode.js#readme"
+}
