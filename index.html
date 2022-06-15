@@ -5,28 +5,87 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>MONO Bank exchange</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const resp = fetch("mono.json")
+                .then(response => {
+
+                    if (response.ok) {
+                        console.log(response)
+                        return response.json();
+                    };
+
+                    if (!response.ok) {
+                        console.error("Помилка:")
+                        console.table(response)
+                    };
+                })
+                .then(data => {
+                    const table = document.createElement("table");
+                    const tr = document.createElement("tr");
+
+                    document.querySelector(".container").append(table);
+                    table.append(tr);
+
+                    data.forEach(elements => {
+                        const tr = document.createElement("tr");
+
+                        for (element of Object.keys(elements)) {
+                            const td = document.createElement("td");
+
+                            td.innerHTML = `<span>${element}</span>
+                                        <span>${elements[element]}</span>`;
+                            tr.append(td);
+                        };
+
+                        table.append(tr);
+                    })
+                })
+        })
+    </script>
+    <style>
+        body {
+            background-color: bisque;
+        }
+
+        table {
+            width: 100%;
+        }
+
+        tr:hover,
+        tr:hover td {
+            background-color: gray;
+            color: white;
+            transition: all 0.2s;
+        }
+
+        td {
+            outline: 2px solid gray;
+        }
+
+        span {
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        span:first-child {
+            justify-content: center;
+            text-transform: capitalize;
+            font-weight: 700;
+        }
+
+        span:last-child {
+            padding: 5px;
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <h2>Login user...</h2>
-        <form action="POST">
-            <input type="email" name="email" id="userEmail">
-            <input type="password" name="password" id="userPassword">
-            <button type="submit">Send</button>
-        </form>
-    </div>
 
-    <!-- script -->
-    <script>
-        const form = document.querySelector("form");
+    <h1>Mono bank</h1>
+    <div class="container"></div>
 
-        form.addEventListener("submit", (data) => {
-            console.log(data);
-        });
-    </script>
-    <script src="./script-2.js"></script>
 </body>
 
 </html>
