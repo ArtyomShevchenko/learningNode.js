@@ -1,0 +1,5 @@
+For example, the MEAN stack is a technology stack for building web applications that uses [M] MongoDB, [E] Express.js, [A] AngularJS, and [N] Node.js: [MEAN] MongoDB is used as the database, Node.js with Express.js for the rest of the back-end, and Angular is used as a front-end framework. While the LAMP Stack, sometimes considered the archetypal stack, uses Linux, Apache, MySQL, and PHP.
+
+/////////////
+
+Наприклад, стек MEAN — це технологічний стек для створення веб-додатків, який використовує M ongoDB, E xpress.js, A ngularJS і N ode.js: MongoDB використовується як база даних, Node.js з Express.js для решти. бек-енду, а Angular використовується як інтерфейсний фреймворк. У той час як стек LAMP , який іноді вважається архетипним стеком, використовує L inux, A pache, M ySQL і P HP.
